@@ -3,9 +3,9 @@ import React from "react";
 
 function Subscription() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <main className="max-w-7xl mx-auto">
       <PricingTable />
-    </div>
+    </main>
   );
 }
 
