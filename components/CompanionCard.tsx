@@ -1,7 +1,11 @@
+"use client";
+import { removeBookmark } from "@/lib/actions/companion.actions";
+import { addBookmark } from "@/lib/actions/companion.actions";
+import { Bell, BellRing } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 interface CompanionCardProps {
   id: string;
@@ -10,6 +14,7 @@ interface CompanionCardProps {
   subject: string;
   duration: number;
   color: string;
+  bookmarked: boolean;
 }
 
 const CompanionCard = ({
@@ -19,14 +24,32 @@ const CompanionCard = ({
   subject,
   duration,
   color,
+  bookmarked,
 }: CompanionCardProps) => {
+  const [isBookmarked, setIsBookmarked] = useState(bookmarked);
+
+  const pathname = usePathname();
+  const handleBookmark = async () => {
+    if (isBookmarked) {
+      await removeBookmark(id, pathname);
+      setIsBookmarked(false);
+    } else {
+      await addBookmark(id, pathname);
+      setIsBookmarked(true);
+    }
+  };
+
   return (
     <article className="companion-card" style={{ backgroundColor: color }}>
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
-        <button className="companion-bookmark">
+        <button className="companion-bookmark" onClick={handleBookmark}>
           <Image
-            src="/icons/bookmark.svg"
+            src={
+              isBookmarked
+                ? "/icons/bookmark-filled.svg"
+                : "/icons/bookmark.svg"
+            }
             alt="bookmark"
             width={12.5}
             height={15}
@@ -45,10 +68,11 @@ const CompanionCard = ({
         />
         <p className="text-sm">{duration} minutes</p>
       </div>
+
       <Link href={`/companions/${id}`} className="w-full">
-        <Button className="btn-primary w-full justify-center">
+        <button className="btn-primary w-full justify-center">
           Launch Lesson
-        </Button>
+        </button>
       </Link>
     </article>
   );

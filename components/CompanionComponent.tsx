@@ -6,7 +6,6 @@ import { vapi } from "@/lib/vapi.sdk";
 import Image from "next/image";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import soundwaves from "@/constants/soundwaves.json";
-import { ca } from "date-fns/locale";
 import { addToSessionHistory } from "@/lib/actions/companion.actions";
 
 const CompanionComponent = ({
