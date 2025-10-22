@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Converso
 
-## Getting Started
+An AI-powered interactive study platform that helps learners create, organize, and revisit personalized learning companions and lessons.  
+Built with **Next.js 15**, **Supabase**, and **Clerk**, and designed for seamless productivity and modern UI experiences.
 
-First, run the development server:
+🌐 **Live Demo:** [https://converso-mocha.vercel.app/](https://converso-mocha.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🔐 **Authentication & User Management** — Powered by [Clerk](https://clerk.dev)
+- 🧠 **AI-Driven Companions** — Create and study with smart learning companions
+- 💾 **Supabase Integration** — Store, manage, and query user data efficiently
+- 📘 **Bookmarking & Session History** — Keep track of your learning journey
+- 🎨 **Beautiful UI** — Built with [Tailwind CSS v4](https://tailwindcss.com/) and [Radix UI](https://www.radix-ui.com/)
+- 📊 **Data Visualization** — Integrates with [Recharts](https://recharts.org/) for insights
+- 🪄 **Form Validation** — Managed using [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- ⚡ **Blazing Fast** — Next.js 15 + Turbopack for development speed
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧰 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Frontend**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js 15.5.6](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Radix UI Components](https://www.radix-ui.com/)
+- [Lucide Icons](https://lucide.dev/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Backend / Database**
 
-## Deploy on Vercel
+- [Supabase](https://supabase.com/)
+- [Clerk Auth](https://clerk.dev/)
+- [Vercel Deployment](https://vercel.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Utilities**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- React Hook Form + Zod
+- Date-fns
+- Recharts
+- Sonner (toasts)
+- Lottie (animations)
